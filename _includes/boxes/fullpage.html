@@ -1,0 +1,58 @@
+{%- assign info = include.data %}
+<article class='fullpage'
+  style='
+    min-height: calc(100vh - {{ info.offset-top | default: '0px' }});
+    background-color: {{ info.background-color | default: 'transparent' }};
+    justify-content: {{ info.justify | default: 'flex-start' }};
+  '>
+  {%- if info.video or info.image %}
+    {%- assign splitContent = 'split-content' %}
+    {%- if info.video.right or info.image.right %}
+      {%- assign alignRight = 'align-right' %}
+    {%- else %}
+      {%- assign alignRight = '' %}
+    {%- endif %}
+  {%- else %}
+    {%- assign splitContent = '' %}
+  {%- endif %}
+  <div class='max-width {{ splitContent }} {{ alignRight }}'>
+    {%- if info.video %}
+      <div class='media'>
+        {%- include video.html src=info.video.src %}
+      </div>
+    {%- elsif info.image %}
+      <div class='media'>
+        {%- include image.html image=info.image %}
+      </div>
+    {%- endif %}
+
+    <div class='text'>
+      {%- if info.subheader %}
+        {%- assign smaller = 'smaller' %}
+      {%- endif %}
+      {%- for hdr in info.headers %}
+        <h1
+          class='animated {{ smaller }}'
+          style='animation-delay: {{ forloop.index | times: 300 | plus: 100 }}ms'>
+          {{ hdr }}
+        </h1>
+      {%- endfor %}
+      {%- if info.subheader %}
+        <h4>{{ info.subheader }}</h4>
+      {%- endif %}
+      {%- if info.text %}
+        <p>{{ info.text }}</p>
+      {%- endif %}
+      {%- if info.more %}
+        <a class='a-button link' href='{{ info.more.href }}'>
+          {{ info.more.label }}
+        </a>
+      {%- endif %}
+      {%- if info.button %}
+        <a class='a-button {{ info.button.color }}' href='{{ info.button.href }}'>
+          {{ info.button.label }}
+        </a>
+      {%- endif %}
+    </div>
+  </div>
+</article>

@@ -1,0 +1,97 @@
+main:
+  offset-top: 74px
+  justify: center
+  headers:
+    - Engage.
+    - Connect.
+    - Build relationships.
+  text: |
+    Powerful tools to help simplifying your classroom workflow
+    so you can focus on inspiring the next generation.
+  button:
+    label: Create free account
+    href: https://app.askclass.com/signup
+
+about:
+  justify: center
+  background-color: '#2cdd88'
+  headers:
+    - What is AskClass?
+  subheader: |
+    Classroom Operating System
+  text: |
+    AskClass is a relationship-based student engagement
+    platform that helps instructors be more effective,
+    productive, and memorable in their teaching.
+  image:
+    src: https://cdn.discordapp.com/attachments/1019999609650675772/1093305404894757065/paul_papercraft_a_child_on_the_ground_reading_a_book_minimalism_abc1e7f9-62e4-4646-9ff8-3edb83cfa293.png
+    text: 'Child reading a book'
+    right: true
+  more:
+    label: Read more
+    href: /modules/about
+
+media-coverage:
+  background-color: '#ffc100'
+  headers:
+    - Media Coverage
+  text: |
+    &ldquo;I believe the decisions that the schools amke in creating classroom environments
+    post-pandemic will determine the type of society our kids will be living in 30 years from now.&rdquo;
+    (Damon Moon, AskClass CEO)
+  button:
+    label: Wall Street Journal
+    href: https://www.wsj.com/articles/college-students-forgot-how-to-talk-to-each-other-11644627316
+    color: secondary
+
+get-in-touch:
+  headers:
+    - Get In Touch
+  text: |
+    Learn how to save time and create impact in 15 minutes with one of our demo experts.
+    This demo session will be one-on-one for interactive demo followed by a Q&A.
+  button:
+    label: Schedule a Demo
+    href: https://calendly.com/damonmoon/demo
+
+modules:
+  type: rounded
+  boxes:
+    - title: Modules
+      text: Access growing list of modules to help you automate your class workflow.
+
+features:
+  type: rounded
+  boxes:
+    - title: Open Questions
+      text: Ask a open-ended questions to provoke discussions.
+      color: white
+      background-image: 'linear-gradient(180deg, #6AC6E4 0%, #34A9D6 100%)'
+    - title: Student Selector
+      text: Select a student at random to answer questions.
+      color: white
+      background-image: 'linear-gradient(180deg, #E98069 0%, #DE4D37 100%)'
+
+games:
+  type: rounded
+  boxes:
+    - title: This or That
+      text: Simple icebreaker choices to help students get to know eachother.
+      color: white
+      background-image: 'linear-gradient(180deg, #4CC0A7 0%, #3DB395 100%)'
+    - title: True or False
+      text: Get to know students by asking them simple questions.
+      color: white
+      background-image: 'linear-gradient(180deg, #ffc100 0%, #d5a000 100%)'
+
+attendance:
+  type: rounded
+  boxes:
+    - title: Points Tracker
+      text: Track students' attendances and points they've earned throughout the course.
+      color: white
+      background-image: 'linear-gradient(180deg, #6e00ff 0%, #5705c3 100%)'
+    - title: Attendance
+      text: Record students attendances and export data for records keeping.
+      color: white
+      background-image: 'linear-gradient(180deg, #333333 0%, #222222 100%)'

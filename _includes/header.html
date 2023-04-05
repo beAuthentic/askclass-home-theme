@@ -1,0 +1,8 @@
+<head>
+  {%- include head/meta.html -%}
+  {%- include head/common.html -%}
+  <link rel="stylesheet" href="{{ 'assets/css/default.css' |  relative_url }}" />
+  {%- if page.collection == 'modules' -%}
+  <link rel="stylesheet" href="{{ 'assets/css/modules.css' |  relative_url }}" />
+  {%- endif -%}
+</head>

@@ -1,0 +1,45 @@
+{% assign ach = site.ach %}
+{% assign desc = page.excerpt | default: site.description | strip_html | strip_newlines %}
+{% assign assets = '/assets/' | prepend: site.url %}
+{% assign families = ach.font_families | join: "&family=" %}
+{%- assign og_image = ach.meta.og_image | prepend: '/assets/' %}
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+
+  <meta name="application-name" content="{{ site.title }}" />
+  <meta name="apple-mobile-web-app-title" content="{{ site.title }}" />
+
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+
+  <meta name="theme-color" content="{{ ach.color.theme }}" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="{{ ach.color.theme }}" />
+  <meta name="description" content="{{ desc }}" />
+  <meta name="keywords" content="{{ ach.meta.keywords | strip_newlines }}" />
+
+  <meta property="og:site_name" content="{{ site.title }}" />
+  <meta property="og:description" content="{{ desc }}" />
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
+  <meta property="og:image" content="{{ page.image | default: og_image }}" />
+  {% if ach.twitter %}
+  <meta name="twitter:site" content="{{ ach.social.twitter }}" />
+  <meta name="twitter:card" content="summary_large_image">
+  {% endif % %}
+
+  <link rel="manifest" href="/assets/site.webmanifest" />
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel='preconnect' href="https://fonts.googleapis.com" crossorigin />
+  <link rel="preload" as="style"
+        href="https://fonts.googleapis.com/css2?family={{ families }}&display=swap"
+        onload='this.onload=null;this.rel="stylesheet"' />
+  <link rel="shortcut icon" href="/assets/{{ ach.meta.shortcut.favicon }}" />
+  <link rel="icon" type="{{ ach.meta.shotcut.type }}" href="/assets/{{ ach.meta.shortcut.image }}" />
+  <link rel="icon" type="image/svg+xml" href="/assets/{{ ach.logo.alt_image }}" />
+
+  <link rel="apple-touch-icon" href="/assets/{{ ach.meta.apple_icon }}" />
+  {% for size in ach.logo.sizes %}
+  <link rel="apple-touch-icon" sizes="{{size}}x{{size}}" href="/assets/logo-square-{{size}}.png" />
+  {%- endfor %}

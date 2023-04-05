@@ -1,0 +1,31 @@
+{%- assign info = include.data %}
+<article class='rounded'>
+  {%- assign len =  info.boxes | size %}
+  {%- if len > 1 %}
+    {%- assign splitContent = 'split-content' %}
+  {%- else %}
+    {%- assign splitContent = '' %}
+  {%- endif %}
+  <div class='max-width {{ splitContent }}'>
+  {%- for box in info.boxes %}
+    <div class='box'
+      style='
+        color: {{ box.color | default: 'black' }};
+        background-image: {{ box.background-image | default: 'transparent' }};
+      '>
+      {%- if box.image %}
+        <div class='image-overlay'>
+          <img src='{{ box.image.src }}' title='{{ box.image.text }}' width='{{ box.image.width }}' />
+        </div>
+      {%- endif %}
+      <h1 class='smaller'>{{ box.title }}</h1>
+      <p>{{ box.text }}</p>
+      {%- if box.button %}
+        <a class='a-button link' href='{{ box.button.href }}'>
+          {{ box.button.label }}
+        </a>
+      {%- endif %}
+    </div>
+  {%- endfor %}
+  </div>
+</article>

@@ -1,0 +1,4 @@
+{%- for segment in site.data.main.segments %}
+  {%- assign info = site.data.segments[segment] %}
+  {%- include boxes/{{ info.type | default: 'fullpage' }}.html data=info %}
+{%- endfor %}

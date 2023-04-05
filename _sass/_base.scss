@@ -1,0 +1,208 @@
+:root {
+  --font-special:       #{$font-special};
+  --font-mono:          #{$font-mono};
+  --font-main:          #{$font-main};
+  --font-secondary:     #{$font-secondary};
+  --font-tertiary:      #{$font-tertiary};
+
+  --color-bg:           #{$color-bg};
+  --color-fg:           #{$color-fg};
+  --color-primary:      #{$color-primary};
+  --color-secondary:    #{$color-secondary};
+  --color-tertiary:     #{$color-tertiary};
+  --color-link:         #{$color-link};
+  --color-dark:         #{$color-dark};
+  --color-theme:        #{$color-theme};
+  --color-row-odd:      #{$color-row-odd};
+  --color-row-even:     #{$color-row-even};
+
+  --color-button-fg:    #{$color-button-fg};
+  --color-button-bg:    #{$color-button-bg};
+  --color-button2-fg:   #{$color-button2-fg};
+  --color-button2-bg:   #{$color-button2-bg};
+  --color-code-bg:      #{$color-code-bg};
+
+  --content-width:      #{$content-width};
+}
+
+body {
+  font-family: var(--font-main);
+  font-size: 17px;
+  line-height: 1.6;
+  background-color: var(--color-bg);
+  color: var(--color-fg);
+  margin: 0;
+  padding: 0;
+  &::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba(0,0,0,0.2);
+    border-radius: 6px;
+  }
+  &::-webkit-scrollbar-corner {
+    background-color: transparent;
+  }
+}
+
+hr {
+  width: 300px;
+  margin-bottom: 20px;
+  margin-top: 40px;
+  border-color: var(--color-bg);
+}
+
+a {
+  color: var(--color-link);
+  text-decoration: none;
+}
+
+h1 { font-size: 3.5em }
+h2 { font-size: 2em }
+h3 { font-size: 1.7em }
+h4 { font-size: 1.4em }
+h5 { font-size: 1.2em }
+h6 { font-size: 1em }
+
+.special {
+  font-family: var(--font-special);
+  text-align: center;
+  color: var(--color-primary);
+  margin: 10px 0 5px 0;
+}
+
+code, pre {
+  font-family: var(--font-mono);
+}
+
+code {
+  white-space: pre-wrap;
+  color: var(--color-secondary);
+  &.rounded {
+    border-radius: 5px;
+    margin: 0 3px;
+    padding: 2px 5px;
+  }
+}
+
+pre {
+  background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));
+  padding: 10px;
+  code {
+    color: inherit;
+  }
+}
+
+sub, sup {
+  font-size: small;
+}
+sup {
+  vertical-align: 6px;
+}
+sub {
+  vertical-align: 0px;
+}
+
+.md-18 { font-size: 18px; }
+.md-24 { font-size: 24px; }
+.md-36 { font-size: 36px; }
+.md-48 { font-size: 48px; }
+.md-disabled { color: rgba(0,0,0,0.6); }
+
+@mixin margin-top() {
+  margin-top: 100px;
+}
+
+@mixin align-middle() {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  text-align: center;
+}
+@mixin align-center() {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  flex-direction: column;
+}
+
+.middle-align {
+  @include align-middle();
+}
+
+.center-align {
+  @include align-center();
+}
+
+.space-between {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.spacer {
+  margin-top: 100px;
+}
+
+.max-width {
+  max-width: var(--content-width);
+  width: 100%;
+}
+
+footer {
+  @include margin-top();
+  @include align-center();
+  color: var(--color-dark);
+  font-size: 14px;
+  ul {
+    padding: 0;
+    display: flex;
+    li {
+      @include align-middle();
+      margin: 0 5px;
+      a {
+        color: var(--color-dark);
+      }
+    }
+  }
+}
+
+.a-button {
+  font-size: 1em;
+  line-height: 1em;
+  transition: all .2s ease-in-out;
+  border: 2px solid transparent;
+  padding: 15px 20px;
+  height: auto;
+  letter-spacing: .75px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  border-radius: 5px;
+  color: var(--color-button-fg);
+  background-color: var(--color-button-bg);
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  &:hover {
+    opacity: 0.8;
+    transform: translateY(-3px);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  }
+  &.link {
+    color: var(--color-fg);
+    background-color: transparent;
+  }
+  &.secondary {
+    color: var(--color-button2-fg);
+    background-color: var(--color-button2-bg);
+  }
+}
+
+.nav-buttons {
+  margin: 0 1em;
+}
