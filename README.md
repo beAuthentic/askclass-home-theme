@@ -54,8 +54,8 @@ The theme is available as open source under the terms of the [MPL-2.0 License].
 [Contributor Covenant]: http://contributor-covenant.org
 [Card Colors]: https://acn.askclass.com/2022/06/18/card-colors
 
-[Deploy Jekyll]: https://github.com/beAuthentic/askclass-home-theme/actions/workflows/pages.yml/badge.svg
-[Deploy Jekyll Link]: https://github.com/beAuthentic/askclass-home-theme/actions/workflows/pages.yml
+[Deploy Jekyll]: https://github.com/beAuthentic/askclass-home-theme/actions/workflows/jekyll.yml/badge.svg
+[Deploy Jekyll Link]: https://github.com/beAuthentic/askclass-home-theme/actions/workflows/jekyll.yml
 
 [Build]: https://github.com/beAuthentic/askclass-home-theme/actions/workflows/gem-push.yml/badge.svg
 [Build Link]: https://github.com/beAuthentic/askclass-home-theme/actions/workflows/gem-push.yml
