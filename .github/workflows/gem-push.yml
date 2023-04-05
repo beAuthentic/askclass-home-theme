@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: ruby/setup-ruby@c4fe7bd15ddbfcd5e07e47bf2f2cae90581d6091
+      - uses: ruby/setup-ruby@55283cc23133118229fd3f97f9336ee23a179fcf
         with:
          bundler-cache: true
 
