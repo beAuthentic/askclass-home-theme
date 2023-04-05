@@ -12,25 +12,23 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: ruby/setup-ruby@55283cc23133118229fd3f97f9336ee23a179fcf
+      - uses: ruby/setup-ruby@v1
         with:
          bundler-cache: true
 
       - name: Get Current Version
         id: version
         run: |
-          echo ::set-output name=OLD::$(grep 'spec.version' *.gemspec | cut -d'"' -f2)
-          echo ::set-output name=NEW::$(echo ${GITHUB_REF_NAME:1})
-
+          echo "OLD=$(grep spec.version *.gemspec | cut -d\" -f2)" >> $GITHUB_OUTPUT
+          echo "NEW=$(echo ${GITHUB_REF_NAME:1})" >> $GITHUB_OUTPUT
       - name: Get Package Name
         id: name
-        run: echo ::set-output name=NAME::$(grep 'spec.name' *.gemspec | cut -d'"' -f2)
+        run: echo "NAME=$(grep spec.name *.gemspec | cut -d\" -f2)" >> $GITHUB_OUTPUT
 
       - name: Update Version
         run: |
           sed -i -e '/spec.version/c\  spec.version       = "${{ steps.version.outputs.NEW }}"' \
           ${{ steps.name.outputs.NAME }}.gemspec
-
       - name: Build
         run: gem build ${{ steps.name.outputs.NAME }}.gemspec
 
@@ -43,12 +41,11 @@ jobs:
           printf -- ":github: Bearer ${{ secrets.GITHUB_TOKEN }}\n" >> $HOME/.gem/credentials
           gem push \
             --key=github \
-            --host="https://rubygems.pkg.github.com/${{ github.repository_owner }}" \
-            ${{ steps.name.outputs.NAME }}-*.gem
+            --host=https://rubygems.pkg.github.com/${{ github.repository_owner }} \
+              ${{ steps.name.outputs.NAME }}-*.gem
           gem push --key=rubygems ${{ steps.name.outputs.NAME }}-*.gem
-
       - name: Version PR
-        uses: peter-evans/create-pull-request@v5
+        uses: peter-evans/create-pull-request@v4
         with:
           commit-message: Update to ${{ steps.version.outputs.NEW }}
           title: Update ${{ steps.name.outputs.NAME }} (${{ steps.version.outputs.NEW }})
@@ -59,5 +56,6 @@ jobs:
       - name: Trim old packages
         uses: actions/delete-package-versions@v4
         with:
-          package-name: 'askclass-home-theme'
+          package-name: ${{ steps.name.outputs.NAME }}
+          package-type: rubygems
           min-versions-to-keep: 5
