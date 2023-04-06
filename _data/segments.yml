@@ -6,7 +6,7 @@ main:
     - Connect.
     - Build relationships.
   text: |
-    Powerful tools to help simplifying your classroom workflow
+    Powerful tools to help simplify your classroom workflow
     so you can focus on inspiring the next generation.
   button:
     label: Create free account
@@ -16,9 +16,9 @@ about:
   justify: center
   background-color: '#2cdd88'
   headers:
-    - What is AskClass?
+    - AskClass là gì?
   subheader: |
-    CLASSROOM OS
+    HỆ ĐIỀU HÀNH LỚP HỌC
   text: |
     AskClass is a relationship-based student engagement
     platform that helps instructors be more effective,

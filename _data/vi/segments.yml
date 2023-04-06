@@ -1,0 +1,31 @@
+main:
+  offset-top: 74px
+  justify: center
+  headers:
+    - Tham gia
+    - Kết nối
+    - Gây dựng mối quan hệ
+  text: |
+    Các công cụ chức năng cao giúp đơn giản hóa quy trình làm việc trong lớp
+    học để bạn có thể tập trung truyền cảm hứng cho thế hệ tiếp theo.
+  button:
+    label: Tạo tài khoản miễn phí
+    href: https://app.askclass.com/signup
+
+about:
+  justify: center
+  background-color: '#2cdd88'
+  headers:
+    - AskClass là gì?
+  subheader: |
+    HỆ ĐIỀU HÀNH LỚP HỌC
+  text: |
+    AskClass là một nền tảng gắn kết sinh viên dựa trên mối quan hệ,
+    giúp người hướng dẫn giảng dạy hiệu quả, năng suất và đáng nhớ hơn.
+  image:
+    src: https://cdn.discordapp.com/attachments/1019999609650675772/1093305404894757065/paul_papercraft_a_child_on_the_ground_reading_a_book_minimalism_abc1e7f9-62e4-4646-9ff8-3edb83cfa293.png
+    text: 'Child reading a book'
+    right: true
+  more:
+    label: Tìm hiểu thêm
+    href: /modules/vi/about
