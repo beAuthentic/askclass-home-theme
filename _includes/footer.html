@@ -1,12 +1,21 @@
+{%- if site.ach.footer %}
 <footer>
   <ul>
-    {% for item in site.ach.footer -%}
+    {%- for item in site.ach.footer -%}
     <li>
+      {%- if item.copyright %}
+        &copy; {{ site.time | date: "%Y" }}&nbsp;
+      {%- endif %}
       {%- if item.icon -%}
         <span class="material-symbols-outlined">{{ item.icon }}</span>
       {%- endif -%}
-      <a href="{{ item.href }}">{{ item.text }}</a>
+      {%- if item.href %}
+        <a href="{{ item.href }}">{{ item.text }}</a>
+      {%- else %}
+        {{ item.text }}
+      {%- endif %}
     </li>
     {%- endfor %}
   </ul>
 </footer>
+{%- endif %}

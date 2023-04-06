@@ -38,9 +38,12 @@ ach:
       university
   footer:
     - href: "https://askclass.com"
-      text: "&copy; 2023 AskClass."
+      text: "AskClass."
+      copyright: true
     - href: "https://app.askclass.com"
-      text: "Keep Asking&reg;"
+      text: "Classroom OS."
+      icon: rocket_launch
+    - text: "Keep Asking&reg;"
   font_families:
     - Lora
     - Open+Sans:ital,wght@0,300;0,400;0,500;0,700;1,400;1,700
