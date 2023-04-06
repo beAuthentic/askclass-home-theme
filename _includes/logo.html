@@ -1,14 +1,5 @@
-<section class="center-align">
-  <article class="space-between max-width">
-    <a href="/">
-      <img src="/assets/{{ include.image | default: site.ach.logo.image }}"
-        width="{{ include.size | default: site.ach.logo.size }}"
-        title="{{ site.title }}" />
-    </a>
-    <div class='nav-buttons'>
-      {%- for button in site.data.nav %}
-        <a href="{{ button.url }}" class="a-button">{{ button.text }}</a>
-      {%- endfor %}
-    </div>
-  </article>
-</section>
+<a href="{{ BASEURL }}">
+  <img src="/assets/{{ include.image | default: site.ach.logo.image }}"
+    width="{{ include.size | default: site.ach.logo.size }}"
+    title="{{ site.title }}" />
+</a>

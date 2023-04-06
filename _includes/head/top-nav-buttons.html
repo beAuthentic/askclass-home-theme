@@ -1,0 +1,8 @@
+{%- assign _nav = site.data[LANG].nav | default: site.data.nav %}
+<div class='nav-buttons'>
+  {%- include head/languages.html %}
+  {%- for button in _nav.buttons %}
+    <a href="{{ button.url }}" class="a-button {{ button.color }}">{{ button.text }}</a>
+  {%- endfor %}
+</div>
+

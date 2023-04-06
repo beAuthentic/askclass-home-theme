@@ -1,0 +1,9 @@
+{%- assign _langs = site.data.nav.languages %}
+{%- assign _langCount = _langs | size %}
+{%- if _langCount > 1 %}
+  {%- assign LANG = page.lang | default: _langs[0].tag %}
+{%- else %}
+  {%- assign LANG = 'en' %}
+{%- endif %}
+{%- assign TEXT = site.data.text[LANG] | default: site.data.text %}
+{%- assign BASEURL = page.lang | default: '' | prepend: '/' %}

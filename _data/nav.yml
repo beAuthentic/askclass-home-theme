@@ -1,2 +1,7 @@
-- text: Sign up
-  url: https://app.askclass.com
+buttons:
+  - text: Sign up
+    url: https://app.askclass.com
+    color: link
+languages:
+  - tag: en
+  - tag: vi

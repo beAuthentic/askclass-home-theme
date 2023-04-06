@@ -1,8 +1,9 @@
 <!doctype html>
-<html lang="en">
+{%- include localize.html %}
+<html lang="{{ LANG }}">
   {% include header.html %}
   <body>
-    {% include logo.html %}
+    {% include head/top-nav.html %}
     <section class="center-align content">
       <article class='max-width'>
         {{ content }}

@@ -1,0 +1,15 @@
+{%- if _langCount > 1 %}
+  {%- for lang in _langs %}
+    {%- assign linkText = lang.text | default: lang.tag %}
+    {%- if LANG == lang.tag %}
+      <a href="javascript:void(0)"
+        class="a-button small">{{ linkText }}</a>
+    {%- elsif lang.tag == _langs[0].tag %}
+      <a href="/"
+        class="a-button small link">{{ linkText }}</a>
+    {%- else %}
+      <a href="/{{ lang.tag }}"
+        class="a-button small link">{{ linkText }}</a>
+    {%- endif %}
+  {%- endfor %}
+{%- endif %}

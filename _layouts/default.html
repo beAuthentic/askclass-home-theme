@@ -1,14 +1,15 @@
 <!doctype html>
-<html lang="en">
+{%- include localize.html %}
+<html lang="{{ LANG }}">
   {% include header.html %}
   <body>
-    {% include logo.html %}
-    {% if page.url == '/' %}
+    {% include head/top-nav.html %}
+    {% if page.url == '/' or page.lang %}
       {% include main.html %}
     {% elsif page.url == '/404.html' %}
-      <h2 class="center-align">Page not found!</h2>
+      <h2 class="center-align">{{ TEXT.page-not-found }}</h2>
     {% elsif page.url == '/offline.html' %}
-      <h2 class="center-align">You're Currently Offline</h2>
+      <h2 class="center-align">{{ TEXT.offline }}</h2>
     {% else %}
       {{ content }}
     {% endif %}
