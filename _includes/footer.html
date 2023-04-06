@@ -1,7 +1,8 @@
-{%- if site.ach.footer %}
+{%- assign FOOTER = site.data[LANG].footer | default: site.data.footer %}
+{%- if FOOTER %}
 <footer>
   <ul>
-    {%- for item in site.ach.footer -%}
+    {%- for item in FOOTER -%}
     <li>
       {%- if item.copyright %}
         &copy; {{ site.time | date: "%Y" }}&nbsp;
