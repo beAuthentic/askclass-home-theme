@@ -3,8 +3,10 @@
   {%- assign len =  info.boxes | size %}
   {%- if len > 1 %}
     {%- assign splitContent = 'split-content' %}
+    {%- assign smaller = 'smaller' %}
   {%- else %}
     {%- assign splitContent = '' %}
+    {%- assign smaller = '' %}
   {%- endif %}
   <div class='max-width {{ splitContent }}'>
   {%- for box in info.boxes %}
@@ -18,7 +20,7 @@
           <img src='{{ box.image.src }}' title='{{ box.image.text }}' width='{{ box.image.width }}' />
         </div>
       {%- endif %}
-      <h1 class='smaller'>{{ box.title }}</h1>
+      <h1 class='{{ smaller }}'>{{ box.title }}</h1>
       <p>{{ box.text }}</p>
       {%- if box.button %}
         <a class='a-button link' href='{{ box.button.href }}'>

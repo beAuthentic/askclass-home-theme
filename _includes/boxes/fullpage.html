@@ -27,12 +27,9 @@
     {%- endif %}
 
     <div class='text'>
-      {%- if info.subheader %}
-        {%- assign smaller = 'smaller' %}
-      {%- endif %}
       {%- for hdr in info.headers %}
         <h1
-          class='animated {{ smaller }}'
+          class='animated'
           style='animation-delay: {{ forloop.index | times: 300 | plus: 100 }}ms'>
           {{ hdr }}
         </h1>
