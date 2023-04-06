@@ -29,6 +29,9 @@
     color: var(--color-button2-fg);
     background-color: var(--color-button2-bg);
   }
+  &.small {
+    padding: 5px;
+  }
 }
 
 .nav-buttons {
