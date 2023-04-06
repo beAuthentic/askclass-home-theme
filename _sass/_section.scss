@@ -48,13 +48,9 @@ article {
       margin-top: 20px;
     }
 
-    h1.smaller {
-      text-transform: uppercase;
-    }
     h4 {
       margin: 0;
       padding: 0;
-      text-transform: uppercase;
       color: var(--color-dark);
     }
     p {
@@ -78,7 +74,6 @@ article {
       padding: 2em;
       margin: 1em 0;
       h1 {
-        text-transform: uppercase;
         margin: 0;
         line-height: 1;
       }
@@ -88,36 +83,30 @@ article {
     }
   }
 
-  @mixin xlarge() {
+  @mixin large() {
     h1 { font-size: 80px; }
     h1.smaller { font-size: 70px; }
     h4, p { font-size: 35px; }
   }
 
-  @mixin large() {
-    h1 { font-size: 60px; }
-    h1.smaller { font-size: 50px; }
-    h4, p { font-size: 30px; }
-  }
-
   @mixin medium() {
     h1 { font-size: 50px; }
     h1.smaller { font-size: 40px; }
-    h4, p { font-size: 24px; }
+    h4, p { font-size: 30px; }
   }
 
   @mixin small() {
     h1 { font-size: 40px; }
     h1.smaller { font-size: 30px; }
-    h4, p { font-size: 18px; }
+    h4, p { font-size: 24px; }
   }
 
   @media screen and (min-width:1024px) {
-    @include xlarge();
+    @include large();
   }
 
   @media screen and (min-width:767px) {
-    @include large();
+    @include medium();
     .max-width.split-content {
       flex-direction: row;
       &.align-right {
@@ -128,9 +117,8 @@ article {
       }
     }
   }
-  @media screen and (max-width:767px) { @include medium(); }
-  @media screen and (max-width:600px) { @include small(); }
+  @media screen and (max-width:767px) { @include small(); }
 
   &.rounded .max-width,
-  .split-content { @include medium(); }
+  .split-content { @include small(); }
 }
