@@ -8,7 +8,8 @@ Simple responsive Jekyll theme for a home page.
 Starting fresh:
 ```sh
 $ echo 'source "https://rubygems.org"' > Gemfile
-$ echo 'theme: askclass-home-theme/ > _config.yml
+$ echo 'gem "askclass-home-theme"' >> Gemfile
+$ echo 'theme: askclass-home-theme' > _config.yml
 $ bundle
 $ jekyll serve
 ```
