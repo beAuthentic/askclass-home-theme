@@ -4,7 +4,7 @@ main:
   headers:
     - Engage.
     - Connect.
-    - Build relationships.
+    - Build friendships.
   text: |
     Powerful tools to help simplify your classroom workflow
     so you can focus on inspiring the next generation.
@@ -18,7 +18,7 @@ about:
   headers:
     - What is AskClass?
   subheader: |
-   CLASSROOM OS
+    CLASSROOM OS
   text: |
     AskClass is a relationship-based student engagement
     platform that helps instructors be more effective,

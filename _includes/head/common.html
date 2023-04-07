@@ -1,7 +1,11 @@
-{% assign ach = site.ach %}
-{% assign desc = page.excerpt | default: site.description | strip_html | strip_newlines %}
-{% assign assets = '/assets/' | prepend: site.url %}
-{% assign families = ach.font_families | join: "&family=" %}
+{%- assign ach = site.ach %}
+{%- assign desc = SEGMENTS[slug].text
+    | default: page.excerpt
+    | default: site.description
+    | strip_html
+    | strip_newlines %}
+{%- assign assets = '/assets/' | prepend: site.url %}
+{%- assign families = ach.font_families | join: "&family=" %}
 {%- assign og_image = ach.meta.og_image | prepend: '/assets/' %}
 
   <meta charset="utf-8" />
@@ -21,11 +25,11 @@
   <meta property="og:site_name" content="{{ site.title }}" />
   <meta property="og:description" content="{{ desc }}" />
   <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
-  <meta property="og:image" content="{{ page.image | default: og_image }}" />
-  {% if ach.twitter %}
+  <meta property="og:image" content="{{ SEGMENTS[slug].image.src | default: page.image | default: og_image }}" />
+  {%- if ach.social.twitter %}
   <meta name="twitter:site" content="{{ ach.social.twitter }}" />
   <meta name="twitter:card" content="summary_large_image">
-  {% endif % %}
+  {%- endif % -%}
 
   <link rel="manifest" href="/assets/site.webmanifest" />
   <link rel="preconnect" href="https://cdn.jsdelivr.net" />
@@ -35,11 +39,12 @@
   <link rel="preload" as="style"
         href="https://fonts.googleapis.com/css2?family={{ families }}&display=swap"
         onload='this.onload=null;this.rel="stylesheet"' />
-  <link rel="shortcut icon" href="/assets/{{ ach.meta.shortcut.favicon }}" />
-  <link rel="icon" type="{{ ach.meta.shotcut.type }}" href="/assets/{{ ach.meta.shortcut.image }}" />
-  <link rel="icon" type="image/svg+xml" href="/assets/{{ ach.logo.alt_image }}" />
+  <link rel="shortcut icon" href="/assets/{{ ach.meta.favicon }}" />
+  {%- for icon in site.data.icons %}
+  <link rel="icon" type="{{ icon.type }}" href="{{ icon.href }}" />
+  {%- endfor %}
 
   <link rel="apple-touch-icon" href="/assets/{{ ach.meta.apple_icon }}" />
-  {% for size in ach.logo.sizes %}
+  {%- for size in ach.logo.sizes %}
   <link rel="apple-touch-icon" sizes="{{size}}x{{size}}" href="/assets/logo-square-{{size}}.png" />
   {%- endfor %}

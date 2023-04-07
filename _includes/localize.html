@@ -7,3 +7,4 @@
 {%- endif %}
 {%- assign TEXT = site.data.text[LANG] | default: site.data.text %}
 {%- assign BASEURL = page.lang | default: '' | prepend: '/' %}
+{%- assign SEGMENTS = site.data[LANG].segments | default: site.data.segments %}

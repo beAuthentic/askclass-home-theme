@@ -23,10 +23,7 @@ ach:
   meta:
     apple_icon: "logo-300.png"
     og_image: "logo-square-512.png"
-    shortcut:
-      favicon: "favicon.ico"
-      type: "image/png"
-      image: "logo-96.png"
+    favicon: "favicon.ico"
     keywords: >
       edtech,
       education,
