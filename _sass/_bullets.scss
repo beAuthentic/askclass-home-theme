@@ -1,15 +1,34 @@
+ul, ol {
+  padding-inline-start: 2em;
+  margin-block-start: 0.5em;
+  margin-block-end: 0.5em;
+  ul, ol {
+    padding-inline-start: 1.2em;
+  }
+  blockquote {
+    padding-left: 0.8em;
+    margin-left: 0.2em;
+    margin-right: 0.5em;
+  }
+}
+ol ::marker, ul ::marker {
+  color: var(--color-bullet);
+}
 ol > li {
   ul > li {
-    list-style-type: disc;
+    list-style-type: initial;
   }
   ol > li {
     list-style: lower-alpha;
+    ol > li {
+      list-style: lower-greek;
+    }
   }
 }
 
 ul > li > ul > li {
-  list-style-type: square;
+  list-style-type: initial;
   ul > li {
-    list-style-type: circle;
+    list-style-type: initial;
   }
 }

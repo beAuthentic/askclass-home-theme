@@ -2,3 +2,4 @@ buttons:
   - text: Đăng nhập
     url: https://app.askclass.com
     color: link
+    hidden: hide-small

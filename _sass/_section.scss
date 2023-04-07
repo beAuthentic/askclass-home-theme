@@ -88,13 +88,14 @@ article {
     h1 { font-size: 80px; }
     h1.smaller { font-size: 70px; }
     h4, p { font-size: 35px; }
+    ul { font-size: 33px; }
     .hide-large { display: none; }
   }
 
   @mixin medium() {
     h1 { font-size: 50px; }
     h1.smaller { font-size: 40px; }
-    h4, p { font-size: 30px; }
+    h4, p, ul { font-size: 30px; }
     .hide-medium { display: none; }
   }
 
@@ -102,12 +103,11 @@ article {
     h1 { font-size: 40px; }
     h1.smaller { font-size: 30px; }
     h4, p { font-size: 24px; }
+    ul { font-size: 23px; }
     .hide-small { display: none; }
   }
 
-  @media screen and (min-width:1024px) {
-    @include large();
-  }
+  @media screen and (max-width:767px) { @include small(); }
 
   @media screen and (min-width:767px) {
     @include medium();
@@ -121,7 +121,10 @@ article {
       }
     }
   }
-  @media screen and (max-width:767px) { @include small(); }
+
+  @media screen and (min-width:1024px) {
+    @include large();
+  }
 
   &.rounded .max-width,
   .split-content { @include small(); }
