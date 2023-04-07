@@ -1,6 +1,5 @@
 .animated {
   margin: 0;
-  line-height: 1.2;
   animation-name: taglineEmerge;
   animation-fill-mode: forwards;
   animation-duration: 1400ms;
@@ -29,10 +28,13 @@ article {
       width: 100%;
     }
     .image-overlay {
-      margin-bottom: 20px;
       img {
-        border-radius: 1em;
+        border-radius: 1em 1em 0 0;
       }
+    }
+    .text-content {
+      margin-top: 2em;
+      padding: 0 2em;
     }
   }
 
@@ -70,8 +72,7 @@ article {
     .box {
       width: 100%;
       box-sizing: border-box;
-      border-radius: 2em;
-      padding: 2em;
+      border-radius: 1em;
       margin: 1em 0;
       h1 {
         margin: 0;
