@@ -2,6 +2,7 @@ buttons:
   - text: Sign up
     url: https://app.askclass.com
     color: link
+    hidden: hide-small
 languages:
   - tag: en
   - tag: vi

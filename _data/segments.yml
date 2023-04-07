@@ -16,9 +16,9 @@ about:
   justify: center
   background-color: '#2cdd88'
   headers:
-    - AskClass là gì?
+    - What is AskClass?
   subheader: |
-    HỆ ĐIỀU HÀNH LỚP HỌC
+   CLASSROOM OS
   text: |
     AskClass is a relationship-based student engagement
     platform that helps instructors be more effective,
@@ -42,6 +42,7 @@ media-coverage:
   more:
     label: Damon Moon, Founder
     href: https://www.linkedin.com/in/damonmoon/
+    size: small
   button:
     label: Wall Street Journal
     href: https://www.wsj.com/articles/college-students-forgot-how-to-talk-to-each-other-11644627316

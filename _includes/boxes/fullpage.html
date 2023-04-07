@@ -41,7 +41,7 @@
         <p>{{ info.text }}</p>
       {%- endif %}
       {%- if info.more %}
-        <a class='a-button link' href='{{ info.more.href }}'>
+        <a class='a-button link {{ info.more.size }}' href='{{ info.more.href }}'>
           {{ info.more.label }}
         </a>
       {%- endif %}

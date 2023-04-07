@@ -87,18 +87,21 @@ article {
     h1 { font-size: 80px; }
     h1.smaller { font-size: 70px; }
     h4, p { font-size: 35px; }
+    .hide-large { display: none; }
   }
 
   @mixin medium() {
     h1 { font-size: 50px; }
     h1.smaller { font-size: 40px; }
     h4, p { font-size: 30px; }
+    .hide-medium { display: none; }
   }
 
   @mixin small() {
     h1 { font-size: 40px; }
     h1.smaller { font-size: 30px; }
     h4, p { font-size: 24px; }
+    .hide-small { display: none; }
   }
 
   @media screen and (min-width:1024px) {

@@ -2,7 +2,7 @@
 <div class='nav-buttons'>
   {%- include head/languages.html %}
   {%- for button in _nav.buttons %}
-    <a href="{{ button.url }}" class="a-button {{ button.color }}">{{ button.text }}</a>
+    <a href="{{ button.url }}" class="a-button {{ button.color }} {{ button.hidden }}">{{ button.text }}</a>
   {%- endfor %}
 </div>
 
