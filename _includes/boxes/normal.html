@@ -1,7 +1,14 @@
 {%- assign info = include.data %}
-<article class='fullpage'
-  style='
+{%- if include.type == 'fullpage' %}
+  {%- capture minHeight %}
     min-height: calc(100vh - {{ info.offset-top | default: '0px' }});
+  {%- endcapture %}
+{%- else %}
+  {%- assign minHeight = '' %}
+{%- endif %}
+<article class='fullpage'
+  style='{{ minHeight }}
+    color: {{ info.color | default: 'inherit' }};
     background-color: {{ info.background-color | default: 'transparent' }};
     justify-content: {{ info.justify | default: 'flex-start' }};
   '>

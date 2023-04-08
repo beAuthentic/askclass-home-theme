@@ -1,5 +1,6 @@
 main:
   offset-top: 74px
+  type: fullpage
   justify: center
   headers:
     - Engage.
@@ -14,6 +15,7 @@ main:
 
 about:
   justify: center
+  type: fullpage
   background-color: '#2cdd88'
   headers:
     - What is AskClass?
@@ -33,6 +35,7 @@ about:
 
 media-coverage:
   justify: center
+  type: fullpage
   background-color: '#ffc100'
   headers:
     - Media Coverage
@@ -50,6 +53,9 @@ media-coverage:
 
 get-in-touch:
   justify: center
+  type: fullpage
+  color: white
+  background-color: '#444'
   headers:
     - Get In Touch
   text: |
@@ -60,10 +66,9 @@ get-in-touch:
     href: https://calendly.com/damonmoon/demo
 
 modules:
-  type: rounded
-  boxes:
-    - title: Classroom Modules
-      text: Access growing list of Classroom OS modules to help you automate your class workflow.
+  headers:
+    - Classroom Modules
+  text: Access growing list of Classroom OS modules to help you automate your class workflow.
 
 features:
   type: rounded

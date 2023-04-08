@@ -1,5 +1,9 @@
 {%- assign _slist = site.data[LANG].main.segments | default: site.data.main.segments %}
 {%- for segment in _slist %}
   {%- assign _info = SEGMENTS[segment] %}
-  {%- include boxes/{{ _info.type | default: 'fullpage' }}.html data=_info %}
+  {%- if _info.type == 'fullpage' %}
+    {%- include boxes/normal.html data=_info type='fullpage' %}
+  {%- else %}
+    {%- include boxes/{{ _info.type | default: 'normal' }}.html data=_info %}
+  {%- endif %}
 {%- endfor %}
