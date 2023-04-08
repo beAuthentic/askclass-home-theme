@@ -1,5 +1,6 @@
 main:
   offset-top: 74px
+  type: fullpage
   justify: center
   headers:
     - Tham gia
@@ -14,6 +15,7 @@ main:
 
 about:
   justify: center
+  type: fullpage
   background-color: '#2cdd88'
   headers:
     - AskClass là gì?
