@@ -65,21 +65,45 @@ article {
     display: flex;
     justify-content: center;
     .max-width {
-      align-items: flex-start;
-      padding: 0 1em;
+      padding: 0 1em 1em;
       width: 100%;
     }
     .box {
       width: 100%;
+      height: 100%;
       box-sizing: border-box;
       border-radius: 1em;
       margin: 1em 0;
+      overflow: hidden;
       h1 {
         margin: 0;
         line-height: 1;
+        overflow: hidden;
+        &.larger {
+          font-size: $box-larger-font-size;
+        }
+        &.shift {
+          margin-top: $box-shift-top-margin;
+          text-shadow: $box-shift-shadow;
+        }
       }
       p {
         font-family: var(--font-secondary);
+      }
+      .image-overlay {
+        position: relative;
+        .overlay {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-image: linear-gradient( 0deg, black, transparent);
+        }
+        transition: all 5s ease-out;
+      }
+      .text-content {
+        position: relative;
       }
     }
   }

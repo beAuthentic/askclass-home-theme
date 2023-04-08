@@ -17,6 +17,11 @@
       '>
       {%- if box.image %}
         <div class='image-overlay'>
+          {%- if box.image.color %}
+          <div class='overlay'
+            onclick='playGif(this)'
+            style='background-image: linear-gradient(0deg, {{ box.image.color }}, transparent)'></div>
+          {%- endif %}
           <img onclick='playGif(this)'
             src='{{ box.image.src }}'
             data-gif='{{ box.image.gif }}'
@@ -25,7 +30,7 @@
         </div>
       {%- endif %}
       <div class='text-content'>
-        <h1 class='{{ smaller }}'>{{ box.title }}</h1>
+        <h1 class='{{ box.class }}'>{{ box.title }}</h1>
         <p>{{ box.text }}</p>
         {%- if box.button %}
           <a class='a-button link' href='{{ box.button.href }}'>

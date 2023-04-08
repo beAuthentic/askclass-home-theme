@@ -68,20 +68,24 @@ modules:
 features:
   type: rounded
   boxes:
-    - title: ASK A QUESTION
+    - title: ASK A<br/>QUESTION
+      class: larger shift
       text: Ask open-ended questions to provoke discussions among students.
       color: white
-      background-image: 'linear-gradient(180deg, #6AC6E4 0%, #34A9D6 100%)'
+      background-image: 'linear-gradient(180deg, #ed9937 0%, #e79430 100%)'
       image:
+        color: '#e79430'
         src: https://firebasestorage.googleapis.com/v0/b/beauthentic-webapp.appspot.com/o/product%2Fscreenshots%2Faskclass-feature-open-questions.png?alt=media&token=0b15a933-fee8-4f13-aef8-c002904571dd
         gif: https://firebasestorage.googleapis.com/v0/b/beauthentic-webapp.appspot.com/o/product%2Fscreenshots%2Faskclass-feature-open-questions.gif?alt=media&token=f49a06b0-1c81-4ee4-8d6b-61b77815483d
         text: Open Questions
 
-    - title: PICK A STUDENT
+    - title: PICK A<br/>STUDENT
+      class: larger shift
       text: Select a student at random to answer questions and award points.
       color: white
-      background-image: 'linear-gradient(180deg, #E98069 0%, #DE4D37 100%)'
+      background-image: 'linear-gradient(180deg, #68f39a 0%, #5fe08d 100%)'
       image:
+        color: '#5fe08d'
         src: https://firebasestorage.googleapis.com/v0/b/beauthentic-webapp.appspot.com/o/product%2Fscreenshots%2Faskclass-feature-rps.png?alt=media&token=8049dc8c-fe3a-4088-b25c-7cd787c7ae6c
         gif: https://firebasestorage.googleapis.com/v0/b/beauthentic-webapp.appspot.com/o/product%2Fscreenshots%2Faskclass-feature-rps.gif?alt=media&token=a19b56d8-0aa3-4084-a37a-ecf9a52f9099
         text: Random Person Selector
@@ -89,20 +93,24 @@ features:
 games:
   type: rounded
   boxes:
-    - title: PLAY A GAME
+    - title: PLAY<br/>A GAME
+      class: larger shift
       text: Simple icebreaker games to help students get to know eachother.
       color: white
-      background-image: 'linear-gradient(180deg, #4CC0A7 0%, #3DB395 100%)'
+      background-image: 'linear-gradient(180deg, #68f39a 0%, #51c37a 100%)'
       image:
+        color: '#51c37a'
         src: https://firebasestorage.googleapis.com/v0/b/beauthentic-webapp.appspot.com/o/product%2Fscreenshots%2Faskclass-feature-this-or-that.png?alt=media&token=f814f852-9e88-459a-bbb9-ac17e6f1f966
         gif: https://firebasestorage.googleapis.com/v0/b/beauthentic-webapp.appspot.com/o/product%2Fscreenshots%2Faskclass-feature-this-or-that.gif?alt=media&token=7c35df2c-e664-4939-8458-f12c3af8072a
         text: This or That
 
-    - title: DISCUSS A TOPIC
+    - title: DISCUSS<br/>A TOPIC
+      class: larger shift
       text: Create slides and engage students in thought provoking discussions.
       color: white
-      background-image: 'linear-gradient(180deg, #ffc100 0%, #d5a000 100%)'
+      background-image: 'linear-gradient(180deg, #8e0441 0%, #d44b3c 100%)'
       image:
+        color: '#d44b3c'
         src: https://firebasestorage.googleapis.com/v0/b/beauthentic-webapp.appspot.com/o/product%2Fscreenshots%2Faskclass-feature-discussion-questions.png?alt=media&token=2c27f9dc-f305-446d-88bb-e3a238517af3
         gif: https://firebasestorage.googleapis.com/v0/b/beauthentic-webapp.appspot.com/o/product%2Fscreenshots%2Faskclass-feature-discussion-questions.gif?alt=media&token=0ec8d65f-db1d-4124-b3da-2d9eb6d925a4
         text: Socratic Inquries
@@ -110,20 +118,24 @@ games:
 attendance:
   type: rounded
   boxes:
-    - title: GIVE POINTS
+    - title: GIVE<br/>POINTS
+      class: larger shift
       text: Track students' points they've earned throughout the course.
       color: white
-      background-image: 'linear-gradient(180deg, #3a6b7e 0%, #264653 100%)'
+      background-image: 'linear-gradient(180deg, #283239 0%, #191e22 100%)'
       image:
+        color: '#191e22'
         src: https://firebasestorage.googleapis.com/v0/b/beauthentic-webapp.appspot.com/o/product%2Fscreenshots%2Faskclass-feature-points.png?alt=media&token=626c63d5-1a48-4b7a-97ac-9c448b5579b0
         gif: https://firebasestorage.googleapis.com/v0/b/beauthentic-webapp.appspot.com/o/product%2Fscreenshots%2Faskclass-feature-points.gif?alt=media&token=f1126b5b-4e7d-42e6-b322-839c60b8041d
         text: Add Points
 
     - title: TAKE ATTENDANCE
+      class: larger shift
       text: Record students attendances and export data for records keeping.
       color: white
       background-image: 'linear-gradient(180deg, #333333 0%, #222222 100%)'
       image:
+        color: '#222222'
         src: https://firebasestorage.googleapis.com/v0/b/beauthentic-webapp.appspot.com/o/product%2Fscreenshots%2Faskclass-feature-attendance.png?alt=media&token=c338e972-7365-44c2-a4d9-c0c04e002063
         gif: https://firebasestorage.googleapis.com/v0/b/beauthentic-webapp.appspot.com/o/product%2Fscreenshots%2Faskclass-feature-attendance.gif?alt=media&token=7f640678-6a2b-4622-b418-ce3a14b5615d
         text: Absences
