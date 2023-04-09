@@ -47,7 +47,7 @@ article {
     padding: 4em 1em;
 
     .media + .text {
-      margin-top: 20px;
+      margin-top: 1em;
     }
 
     h4 {
@@ -63,12 +63,11 @@ article {
     display: flex;
     justify-content: center;
     .max-width {
-      padding: 0 1em 1em;
+      padding: 0 1em;
       width: 100%;
     }
     .box {
       width: 100%;
-      height: 100%;
       box-sizing: border-box;
       border-radius: 1em;
       margin: 1em 0;
@@ -133,6 +132,9 @@ article {
 
   @media screen and (min-width:767px) {
     @include medium();
+    &.rounded {
+      margin: 20px 0;
+    }
     .max-width.split-content {
       flex-direction: row;
       &.align-right {
@@ -140,6 +142,9 @@ article {
       }
       .box, .media, .text {
         flex: 0 0 49%;
+      }
+      .box {
+        height: 100%;
       }
     }
   }
