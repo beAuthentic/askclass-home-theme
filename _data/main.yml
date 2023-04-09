@@ -4,6 +4,6 @@ segments:
   - media-coverage
   - get-in-touch
   - modules
-  - features
-  - games
-  - attendance
+  - feat-questions
+  - feat-random-game
+  - feat-attendance-points

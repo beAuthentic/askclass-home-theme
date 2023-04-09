@@ -70,7 +70,7 @@ modules:
     - Classroom Modules
   text: Access growing list of Classroom OS modules to help you automate your class workflow.
 
-features:
+feat-questions:
   type: rounded
   boxes:
     - title: ASK A<br/>QUESTION
@@ -84,31 +84,6 @@ features:
         gif: https://firebasestorage.googleapis.com/v0/b/beauthentic-webapp.appspot.com/o/product%2Fscreenshots%2Faskclass-feature-open-questions.gif?alt=media&token=f49a06b0-1c81-4ee4-8d6b-61b77815483d
         text: Open Questions
 
-    - title: PICK A<br/>STUDENT
-      class: larger shift
-      text: Select a student at random to answer questions and award points.
-      color: white
-      background-image: 'linear-gradient(180deg, #68f39a 0%, #5fe08d 100%)'
-      image:
-        color: '#5fe08d'
-        src: https://firebasestorage.googleapis.com/v0/b/beauthentic-webapp.appspot.com/o/product%2Fscreenshots%2Faskclass-feature-rps.png?alt=media&token=8049dc8c-fe3a-4088-b25c-7cd787c7ae6c
-        gif: https://firebasestorage.googleapis.com/v0/b/beauthentic-webapp.appspot.com/o/product%2Fscreenshots%2Faskclass-feature-rps.gif?alt=media&token=a19b56d8-0aa3-4084-a37a-ecf9a52f9099
-        text: Random Person Selector
-
-games:
-  type: rounded
-  boxes:
-    - title: PLAY<br/>A GAME
-      class: larger shift
-      text: Simple icebreaker games to help students get to know eachother.
-      color: white
-      background-image: 'linear-gradient(180deg, #68f39a 0%, #51c37a 100%)'
-      image:
-        color: '#51c37a'
-        src: https://firebasestorage.googleapis.com/v0/b/beauthentic-webapp.appspot.com/o/product%2Fscreenshots%2Faskclass-feature-this-or-that.png?alt=media&token=f814f852-9e88-459a-bbb9-ac17e6f1f966
-        gif: https://firebasestorage.googleapis.com/v0/b/beauthentic-webapp.appspot.com/o/product%2Fscreenshots%2Faskclass-feature-this-or-that.gif?alt=media&token=7c35df2c-e664-4939-8458-f12c3af8072a
-        text: This or That
-
     - title: DISCUSS<br/>A TOPIC
       class: larger shift
       text: Create slides and engage students in thought provoking discussions.
@@ -120,7 +95,32 @@ games:
         gif: https://firebasestorage.googleapis.com/v0/b/beauthentic-webapp.appspot.com/o/product%2Fscreenshots%2Faskclass-feature-discussion-questions.gif?alt=media&token=0ec8d65f-db1d-4124-b3da-2d9eb6d925a4
         text: Socratic Inquries
 
-attendance:
+feat-random-game:
+  type: rounded
+  boxes:
+    - title: PICK A<br/>STUDENT
+      class: larger shift
+      text: Select a student at random to answer questions and award points.
+      color: white
+      background-image: 'linear-gradient(180deg, #68f39a 0%, #5fe08d 100%)'
+      image:
+        color: '#5fe08d'
+        src: https://firebasestorage.googleapis.com/v0/b/beauthentic-webapp.appspot.com/o/product%2Fscreenshots%2Faskclass-feature-rps.png?alt=media&token=8049dc8c-fe3a-4088-b25c-7cd787c7ae6c
+        gif: https://firebasestorage.googleapis.com/v0/b/beauthentic-webapp.appspot.com/o/product%2Fscreenshots%2Faskclass-feature-rps.gif?alt=media&token=a19b56d8-0aa3-4084-a37a-ecf9a52f9099
+        text: Random Person Selector
+
+    - title: PLAY<br/>A GAME
+      class: larger shift
+      text: Simple icebreaker games to help students get to know eachother.
+      color: white
+      background-image: 'linear-gradient(180deg, #68f39a 0%, #51c37a 100%)'
+      image:
+        color: '#51c37a'
+        src: https://firebasestorage.googleapis.com/v0/b/beauthentic-webapp.appspot.com/o/product%2Fscreenshots%2Faskclass-feature-true-or-false.png?alt=media&token=606418b6-24f0-4ec6-a705-5310c4af0fc8
+        gif: https://firebasestorage.googleapis.com/v0/b/beauthentic-webapp.appspot.com/o/product%2Fscreenshots%2Faskclass-feature-true-or-false.gif?alt=media&token=55538158-bcde-4915-9eb3-5498f5be62e6
+        text: This or That
+
+feat-attendance-points:
   type: rounded
   boxes:
     - title: GIVE<br/>POINTS
