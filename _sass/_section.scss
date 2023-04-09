@@ -78,6 +78,7 @@ article {
         overflow: hidden;
         &.larger {
           font-size: $box-larger-font-size;
+          line-height: $box-larger-line-height;
         }
         &.shift {
           margin-top: $box-shift-top-margin;
